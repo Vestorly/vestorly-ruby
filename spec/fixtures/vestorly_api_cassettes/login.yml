@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.vestorly.com/api/v1/session_management/sign_in?password=12desbrosses&username=jpwisz@gmail.com&version=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 02 Apr 2014 18:04:21 GMT
+      Etag:
+      - '"7039c4d8cb5d7ef9ceeb41db0bdc977b"'
+      Server:
+      - thin 1.6.2 codename Doc Brown
+      Set-Cookie:
+      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA0Y2JhMTI3MWZhZTA0MTYyNTRmMTRhNjZhOTRkODQwBjsAVA%3D%3D--e6b2692a819ad0e7a106eeaba4ffacab8036622e;
+        path=/; HttpOnly
+      - vestorly-auth=eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ;
+        path=/
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 7f5ac2cb-645c-462d-9994-1b22d4a14c36
+      X-Runtime:
+      - '0.163948'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"user":{"_id":"4f6542c0cfb4930001000013","about":"","account_type":"free","activation_code":null,"activation_redirect_url":null,"active":true,"activity_feed_events":[],"address":"12
+        Desbrosses St.\r\nNew York, NY, 10013","adv_brochure":"","advisor_employees":"5","advisor_users":[],"ary_update":"2013-04-12T00:00:00Z","assets":"5000000","assets_ary":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"assets_ary_update":"2014-03-31","auto_curation_enabled":false,"birthday":"12/08/1984","city":"","client_ids":["4fcd004ed374200001000098","50f7019a4557fd00020000d2","515b3c9498fdb50002000010","515f71e812e6560002000032","516331ea95e6240002000061","5163bd1d9bba1b00020004e7","51686a6240ffcc0002000017","5170656d3366f80002000a15","5176a2128278bf000200011c","517714dd76a6640002000046","51b919c2dba71e000200002c","51c477dddd624600020004b9","51bb445d4c429a000200000b","51e7db987f9f4100020001d6","51f668915c12540002000238","506b3f9d48e8f10002000348","523cd173fc103a0002000030","523cd1b7a2b8870002000042","525811447b944500020000f0","51793515960b0b0002000518","5193d7c3d3c0e60002000216","51a754a038161400020002b8","51b648b91d84b80002000009","51b64a29f0c08500020001e0","51d1dbace5b4b20002000794","51c4b56226d63300020000ab","51f19433b152c70002000026","525813b0b6c5370002000383","5261603c7838bd0002000219","52617c057853c10002000019","52878b345d82c5000200000c","52cdc252c41e2d000200021d","52e16afce3b97e00020000f3","52f3bf950150fc00020001d3","52fa1ff996150b000200018c","530cd05bb984e8000200004b","5318fac983e2f100020003ef","531de33a1476890002000164","531fa4c88180f900020002bd","532382b63a058e0002000011","53238a0a3778d40002000020"],"company":"Justin
+        Wealth Management","compensation_method":["% of AUM"],"compliance_officer_ids":[],"compliance_setting":{"_id":"5170d2d0e0d28b0002000028","email":"","last_emailed":"1993-04-24T15:31:45+00:00","last_updated":"2014-03-28T20:59:25+00:00","name":"","phone":"","require_pre_approval":false,"status":"later"},"consultation_reminder":"on","content_setup_completed":true,"content_setup_started":true,"created_on":"2012-06-18T16:06:05Z","custodian":"Interactive","disclosure":"","education":[{"school":{"id":"22475845791","name":"Hampden-Sydney
+        College"},"type":"College"}],"email_blast":"off","email_blast_date":"1993-05-29T11:14:14+00:00","email_newsletter_date":null,"email_newsletter_frequency":"off","email_newsletter_hour":0,"email_report_blast":"off","email_report_blast_date":"1994-02-05T01:05:25+00:00","embed_height":"1000","embed_limit":"4","embed_width":"500","facebook_blast":"off","facebook_blast_date":"1993-05-29T11:14:14+00:00","facebook_newsletter_date":null,"facebook_newsletter_frequency":"off","facebook_newsletter_hour":0,"facebook_uid":"54400606","family":[{"name":"Jeff
+        Spagnolo","id":"1650549490","relationship":"uncle"},{"name":"Zach Wisz","id":"100003541167750","relationship":"brother"}],"first_name":"Justin","free_plan":false,"gender":"male","google_uid":null,"graph_start_date":"2013-04-14","have_advisor":false,"interest_consultation":"No","interest_in_new_advisor":false,"invite_queue":[{"email
+        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
+        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
+        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
+        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
+        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
+        person":true},{"email person":true},{"email person":true},{"csv people":true}],"invited":true,"invites":9,"is_seed_with_vestorly_news":false,"joined_on":"2012-03-18T02:04:48+00:00","last_check_prospect":"2003-04-05T22:28:41+00:00","last_name":"Wisz","last_newscred_update":"2014-04-01T17:03:31+00:00","last_update_all_arrays":"2014-03-31T01:55:55+00:00","last_weekly_email":"2013-06-13T12:03:35+00:00","launch_date":"2012-04-04T22:56:05+00:00","linkedin":"http://www.linkedin.com/pub/justin-wisz/9/375/193","linkedin_blast":"off","linkedin_blast_date":"1993-05-29T11:14:14+00:00","linkedin_newsletter_date":null,"linkedin_newsletter_frequency":"off","linkedin_newsletter_hour":0,"linkedin_reminder_blast_date":"1993-07-29T13:04:56+00:00","linkedin_uid":null,"location":{"id":"108424279189115","name":"New
+        York, New York"},"logo":"","meeting_date":"2013-05-29 11:14:14 +0000","members_added":true,"members_added_started":true,"message_clicks":128,"message_sign_ups":2,"messages":0,"migrate_addl_social_model2":false,"migrate_addl_social_model3":false,"migrate_addl_social_model4":true,"migrated_advisor_users":true,"migrated_last_active_time":false,"migrated_model":true,"migrated_social_model":true,"migrated_social_model_advisor":false,"name":"Justin
+        Wisz","newscred_setting_id":"52f1a010cfffbe0002000033","newsletter_setup_completed":true,"newsletter_setup_started":true,"num_advisor_clients":12,"num_advisor_prospects":25,"num_clients":5,"num_posts":34,"other_compensation":"","other_custodian":"","other_services_types":"","password_hash":"$2a$10$1JiqO8wOoeOxQj3Z9guOgub8cevUUTeXRgtYv3GaOgzqj2RK70q5i","past_due":false,"performance_audited":"No","phone":"6467234320","picture":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/260675_54400606_577132500_q.jpg","plan":"none","portfolio_size":null,"posts_randomized":false,"profile_picture":"4f6542c0cfb4930001000013/1336061606/Logo-Vector.gif","prospects_ary":[1,1,2,3,3,5,5,5,6,8,8,15,15,15,15,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,19,19,19,19,21,21,21,22,23,23,23,23,23,23,27,28,28,29,29,29,29,29,31,31,31,31,31,31,31,32,32,32,32,32,32,33,33,33,33,33,33,33,33,33,33,33,33,33,33,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,39,39,39,39,39,39,39,39,39,39,39,39,39,39,40,40,40,40,40,41,41,41,41,41,41,41,41,41,41,41,41,41,41,42,42,42,42,42,42,42,42,42,43,43,43,43,44,44,45,45,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47],"prospects_ary_update":"2014-03-31","referral_reminder":"on","reg_number":"155555","require_pre_approval":false,"salesforce_account_id":null,"salesforce_contact_id":null,"salesforce_lead_id":null,"services_types":["Portfolio
+        management for individuals","Portfolio management for companies or institutions"],"slug":"wisz","state":"NY","stripe_customer_id":"cus_T57hyIsxuwVFT5","top_bar_content_published":true,"top_bar_content_setup_completed":true,"top_bar_enabled":false,"top_bar_members_added":true,"top_bar_newsletter_setup_completed":true,"trial_length":126230400,"twitter_blast":"off","twitter_blast_date":"1993-05-29T11:14:14+00:00","twitter_handle":"vestorly","twitter_newsletter_date":null,"twitter_newsletter_frequency":"off","twitter_newsletter_hour":0,"twitter_uid":"28592814","twitter_user":{"_id":"5213defaa53e3e0002000390","email":null,"last_friend_ordered_hash":"1993-10-18T04:54:16+00:00","name":null,"secret":"ZvjDNQ8gtSa5xVNG9uHLBpb2IzEIJtJU8jiCZvdhu0o","token":"28592814-QGYClRXsQsgEofMtvnTVWcX79dqnPTIBYnwy50WrU","total_friends":0,"uid":"28592814"},"username":"jpwisz@gmail.com","views_ary":[0,4,4,4,4,5,5,5,16,17,17,17,17,17,17,17,17,17,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20,20,20,24,24,24,25,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,30,30,30,30,30,30,30,30,30,30,32,32,32,32,32,32,32,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37],"views_ary_update":"2014-03-31","wall_post_clicks":0,"wall_post_sign_ups":0,"wall_posts":0,"webpage_image_id":"5281036a159578000200007a","website":"www.bloomberg.com","weekly_email_blast":"off","work":[{"employer":{"id":"306505096071446","name":"Vestorly"},"position":{"id":"109861219064569","name":"Co-Founder/CEO"},"start_date":"0000-00"},{"employer":{"id":"119208724777451","name":"ForwardPro
+        Partners"},"location":{"id":"114952118516947","name":"San Francisco, California"},"position":{"id":"107957955904825","name":"Founder"},"start_date":"2009-01","end_date":"2010-01"},{"employer":{"id":"103772269661447","name":"SNL
+        Financial"},"location":{"id":"108424279189115","name":"New York, New York"},"start_date":"2009-01","end_date":"2009-01"},{"employer":{"id":"108151482549047","name":"Fisher
+        Investments"},"location":{"id":"103754196329579","name":"Woodside, California"},"start_date":"2007-01","end_date":"2009-01"}],"yahoo_uid":null,"zip":"10013","picture_url":null,"user_type":"Advisor","app_theme_logo_url":null,"social_tabs_enabled":false,"news_url":null},"auth_cookie":"eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ","new_user":false,"vestorly-auth":"eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ","advisor_id":"wisz","advisor_company":"Justin
+        Wealth Management","advisor_picture_url":null,"advisor_website":"http://www.bloomberg.com","message":"Login
+        Successful."}'
+    http_version: 
+  recorded_at: Wed, 02 Apr 2014 18:04:20 GMT
+recorded_with: VCR 2.9.0

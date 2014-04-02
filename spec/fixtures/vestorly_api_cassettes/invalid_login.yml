@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.vestorly.com/api/v1/session_management/sign_in?password=nonexistingdude&username=invalid@example.com&version=1
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 401
+      message: Unauthorized
+    headers:
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Wed, 02 Apr 2014 18:04:21 GMT
+      Server:
+      - thin 1.6.2 codename Doc Brown
+      Set-Cookie:
+      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA3Zjc0MThlZDdlMTIzNmJkYWVlOWE4MTk1Y2JjMjQ0BjsAVA%3D%3D--8cf0afda5865de5e29c856faa4f5abc7e9fb8168;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - 146b8852-e39e-478a-ba39-4cc79aa37362
+      X-Runtime:
+      - '0.018364'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"message":"Invalid login credentials."}'
+    http_version: 
+  recorded_at: Wed, 02 Apr 2014 18:04:20 GMT
+recorded_with: VCR 2.9.0
