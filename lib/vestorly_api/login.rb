@@ -28,6 +28,10 @@ module VestorlyApi
       "#{Login.default_api_endpoint}/session_management/sign_in?version=#{Login.api_version}"
     end
 
+    def advisor_id
+      @login_response["advisor_id"]
+    end
+
     private
 
     def login_query_params

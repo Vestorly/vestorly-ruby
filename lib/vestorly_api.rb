@@ -1,8 +1,10 @@
-require "httparty"
+require 'httparty'
 
-Dir[File.dirname(__FILE__) + '/vestorly_api/*.rb'].each do |file|
-  require file
-end
+require 'vestorly_api/version'
+require 'vestorly_api/exceptions'
+require 'vestorly_api/default_endpoint'
+require 'vestorly_api/login'
+require 'vestorly_api/advisor'
 
 module VestorlyApi
 

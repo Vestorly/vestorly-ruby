@@ -66,6 +66,11 @@ describe VestorlyApi::Login do
           login_api.authentication_token.should eq("eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ")
         end
 
+        it 'gives the advisor id' do
+          login_api = described_class.new(username, password)
+          login_api.login
+          login_api.advisor_id.should eq("wisz")
+        end
       end
 
       describe "with invalid authentication" do

@@ -1,18 +1,12 @@
 require 'bundler/setup'
 Bundler.setup
 
-# require_relative '../lib/vestorly_api'
-
 require 'vestorly_api'
-
-# require 'minitest/autorun'
-# require 'webmock/minitest'
 require 'rspec'
 require 'rspec/autorun'
 require 'webmock'
 require 'vcr'
 require 'turn'
-# require 'httparty'
 
 
 Turn.config do |config|
