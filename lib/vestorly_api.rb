@@ -1,4 +1,6 @@
 require 'httparty'
+require 'ruby-redtail'
+require_relative '../config/initializers/ruby-redtail'
 
 require 'vestorly_api/version'
 require 'vestorly_api/exceptions'
