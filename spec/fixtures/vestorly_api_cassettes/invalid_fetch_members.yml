@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.vestorly.com/api/v1/advisors/rodas/advisor_user_entries.json?vestorly-auth=invalid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Thu, 18 Sep 2014 23:44:05 GMT
+      Status:
+      - 403 Forbidden
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Content-Type:
+      - text/html; charset=utf-8
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 10e6e7cb-7dd6-4413-a9f0-6efac6e4a94b
+      X-Runtime:
+      - '0.003777'
+      X-Rack-Cache:
+      - miss
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version:
+  recorded_at: Thu, 18 Sep 2014 23:44:05 GMT
+recorded_with: VCR 2.9.0
