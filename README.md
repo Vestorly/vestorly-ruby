@@ -26,40 +26,40 @@ ENV['REDTAIL_SECRET_KEY']
 ENV['REDTAIL_API_URI']
 ```
 
-### Login to Vestorly API
+### SignIn to Vestorly API
 
-Login will return the authentication token on success, and if the login is invalid, it will raise `VestorlyApi::Exceptions::InvalidLoginCredentials`
+Sign in will return the authentication token on success, and if the sign_in is invalid, it will raise `VestorlyApi::Exceptions::InvalidSignInCredentials`
 
 **Example**: Authentication to the API
 
 ```ruby
-login_api = VestorlyApi::Login.new('my@user.com', 'password')
+sign_in_api = VestorlyApi::SignIn.new('my@user.com', 'password')
 
 begin
-  authentication_token = login_api.login # vestorly-auth
-rescue VestorlyApi::Exceptions::InvalidLoginCredentials
+  authentication_token = sign_in_api.sign_in # vestorly-auth
+rescue VestorlyApi::Exceptions::InvalidSignInCredentials
   # Do rescue stuff...
 end
 ```
 
-`VestorlyApi::Login` also provides the following public methods usable after the login was successful:
+`VestorlyApi::SignIn` also provides the following public methods usable after the sign_in was successful:
 
 ```ruby
-login_api.authentication_token # vestorly-auth
-login_api.advisor_id # advisor id
+sign_in_api.authentication_token # vestorly-auth
+sign_in_api.advisor_id # advisor id
 ```
 
 ### Using the advisor API object
 
-Once logged in with a valid login object, it can be passed to the `VestorlyApi::Advisor` to request on the advisor API part:
+Once logged in with a valid sign_in object, it can be passed to the `VestorlyApi::Advisor` to request on the advisor API part:
 
 **Example**: Obtain the list of prospective clients for the logged in advisor
 
 ```ruby
-login_api = VestorlyApi::Login.new('my@user.com', 'password')
-login_api.login
+sign_in_api = VestorlyApi::SignIn.new('my@user.com', 'password')
+sign_in_api.sign_in
 
-advisor_api = VestorlyApi::Advisor.new(login_api)
+advisor_api = VestorlyApi::Advisor.new(sign_in_api)
 advisor_user_entries = advisor_api.advisor_user_entries
 
 # with query params
@@ -71,10 +71,10 @@ advisor_user_entries = advisor_api.advisor_user_entries( query_params_hash )
 
 
 ```ruby
-login_api = VestorlyApi::Login.new('my@user.com', 'password')
-login_api.login
+sign_in_api = VestorlyApi::SignIn.new('my@user.com', 'password')
+sign_in_api.sign_in
 
-advisor_api = VestorlyApi::Advisor.new(login_api)
+advisor_api = VestorlyApi::Advisor.new(sign_in_api)
 advisor_posts = advisor_api.advisor_posts
 
 # with query params
@@ -82,7 +82,28 @@ query_params_hash = { 'filter_by' => 'prospects' }
 advisor_posts = advisor_api.advisor_posts(query_params_hash)
 ```
 
-**NB**: The examples above asume the login was successful
+**NB**: The examples above asume the sign_in was successful
+
+
+### Sign out of Vestorly API
+
+To sign out of the Vestorly API we can use the `VestorlyApi::SigOut` object
+
+**Example**: The sign out can be call in the 2 following forms
+
+```ruby
+# Creating an object and calling sign_out method
+response = VestorlyApi::SignOut.new(authentication_token).sign_out
+
+# Calling sig_out method on the class
+response = VestorlyApi::SignOut.sign_out(authentication_token)
+
+# response is a hash containing code and message keys
+p response # { code: 202, message: "Successfully logged out." }
+
+# with invalid authentication token
+p response # { code: 404, message: "Not signed in. }
+```
 
 ## Dependencies
 

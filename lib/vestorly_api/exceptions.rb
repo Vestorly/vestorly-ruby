@@ -2,7 +2,7 @@ module VestorlyApi
   module Exceptions
 
     class AuthenticationError < StandardError; end
-    class InvalidLoginCredentials < AuthenticationError; end
+    class InvalidSignInCredentials < AuthenticationError; end
 
   end
 end

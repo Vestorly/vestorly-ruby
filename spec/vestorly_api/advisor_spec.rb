@@ -36,16 +36,16 @@ describe VestorlyApi::Advisor do
     let(:authentication_token) { "eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ" }
 
     before do
-      VestorlyApi::Login.any_instance.stub(:login).with(username, password).and_return { authentication_token }
-      VestorlyApi::Login.any_instance.stub(:authentication_token).and_return { authentication_token }
-      VestorlyApi::Login.any_instance.stub(:advisor_id).and_return { advisor_id }
-      @login_api = VestorlyApi::Login.new(username, password)
+      VestorlyApi::SignIn.any_instance.stub(:sign_in).with(username, password).and_return { authentication_token }
+      VestorlyApi::SignIn.any_instance.stub(:authentication_token).and_return { authentication_token }
+      VestorlyApi::SignIn.any_instance.stub(:advisor_id).and_return { advisor_id }
+      @sign_in_api = VestorlyApi::SignIn.new(username, password)
     end
 
     subject { described_class }
 
     it 'gives the api endpoints based action' do
-      advisor_api = described_class.new(@login_api)
+      advisor_api = described_class.new(@sign_in_api)
       advisor_api.action_api_endpoint('some_action.json')
         .should eq("https://www.vestorly.com/api/v1/advisors/wisz/some_action.json")
     end
@@ -61,12 +61,12 @@ describe VestorlyApi::Advisor do
       end
 
       it 'records the fixture' do
-        advisor_api = described_class.new(@login_api)
+        advisor_api = described_class.new(@sign_in_api)
         advisor_api.advisor_user_entries({ 'filter_by' => 'prospects' })
       end
 
       it 'gives the advisor user entries' do
-        advisor_api = described_class.new(@login_api)
+        advisor_api = described_class.new(@sign_in_api)
         response = advisor_api.advisor_user_entries({ 'filter_by' => 'prospects' })
         response.code.should eq(200)
       end
@@ -94,12 +94,12 @@ describe VestorlyApi::Advisor do
       end
 
       it 'records the fixture' do
-        advisor_api = described_class.new(@login_api)
+        advisor_api = described_class.new(@sign_in_api)
         advisor_api.advisor_posts
       end
 
       it 'gives the advisor user entries' do
-        advisor_api = described_class.new(@login_api)
+        advisor_api = described_class.new(@sign_in_api)
         response = advisor_api.advisor_posts
         response.code.should eq(200)
       end

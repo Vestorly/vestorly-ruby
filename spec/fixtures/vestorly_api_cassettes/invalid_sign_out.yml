@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://www.vestorly.com/api/v1/session_management/sign_out?version=1&vestorly-auth=invalidTokenSomething
+    body:
+      encoding: UTF-8
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json; charset=utf-8
+      Date:
+      - Sun, 06 Apr 2014 22:59:06 GMT
+      Server:
+      - thin 1.6.2 codename Doc Brown
+      Set-Cookie:
+      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTliNThlYzAxNmMxM2VkY2I5Yjg5ZDIwNDQ2ZDI3MWNjBjsAVA%3D%3D--54a6922ed065bba70fa0811d317c51e0be01827d;
+        path=/; HttpOnly
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - invalidate, pass
+      X-Request-Id:
+      - db286f4b-0060-4301-900b-4afe367d2f8b
+      X-Runtime:
+      - '0.021919'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"message":"Not signed in."}'
+    http_version: 
+  recorded_at: Sun, 06 Apr 2014 22:59:04 GMT
+recorded_with: VCR 2.9.0

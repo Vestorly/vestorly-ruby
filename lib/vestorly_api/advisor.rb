@@ -4,8 +4,8 @@ module VestorlyApi
     include HTTParty
     extend DefaultEndpoint
 
-    def initialize(authenticated_login)
-      @authenticated_login = authenticated_login
+    def initialize(authenticated_sign_in)
+      @authenticated_sign_in = authenticated_sign_in
       @query_params
     end
 
@@ -14,7 +14,7 @@ module VestorlyApi
     end
 
     def action_api_endpoint(request_action)
-      "#{Advisor.advisor_api_endpoint}/#{@authenticated_login.advisor_id}/#{request_action}"
+      "#{Advisor.advisor_api_endpoint}/#{@authenticated_sign_in.advisor_id}/#{request_action}"
     end
 
     def advisor_user_entries(query_params={})
@@ -41,7 +41,7 @@ module VestorlyApi
 
     def default_query_params
       {
-        "vestorly-auth" => @authenticated_login.authentication_token
+        "vestorly-auth" => @authenticated_sign_in.authentication_token
       }
     end
 

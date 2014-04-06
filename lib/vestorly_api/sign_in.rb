@@ -1,5 +1,5 @@
 module VestorlyApi
-  class Login
+  class SignIn
 
     include HTTParty
     extend DefaultEndpoint
@@ -8,33 +8,33 @@ module VestorlyApi
       @username = username
       @password = password
       @authentication_token = nil
-      @login_response = nil
+      @sign_in_response = nil
     end
 
-    def login
-      @login_response = Login.post( Login.login_api_endpoint, :query => login_query_params )
+    def sign_in
+      @sign_in_response = SignIn.post( SignIn.sign_in_api_endpoint, query: default_query_params )
       if ok_response?
         authentication_token
       else
-        raise VestorlyApi::Exceptions::InvalidLoginCredentials
+        raise VestorlyApi::Exceptions::InvalidSignInCredentials
       end
     end
 
     def authentication_token
-      @login_response["vestorly-auth"]
+      @sign_in_response["vestorly-auth"]
     end
 
-    def self.login_api_endpoint
-      "#{Login.default_api_endpoint}/session_management/sign_in?version=#{Login.api_version}"
+    def self.sign_in_api_endpoint
+      "#{SignIn.default_api_endpoint}/session_management/sign_in?version=#{SignIn.api_version}"
     end
 
     def advisor_id
-      @login_response["advisor_id"]
+      @sign_in_response["advisor_id"]
     end
 
     private
 
-    def login_query_params
+    def default_query_params
       {
         :username => @username,
         :password => @password
@@ -46,11 +46,11 @@ module VestorlyApi
     end
 
     def response_status_code
-      @login_response.code
+      @sign_in_response.code
     end
 
     def response_status_message
-      @login_response.message
+      @sign_in_response.message
     end
   end
 end
