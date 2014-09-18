@@ -16,6 +16,12 @@ Or install it yourself as:
 
     $ gem install vestorly_api
 
+## Running the tests
+
+```bash
+rspec
+```
+
 ## Usage
 
 This gem uses `ruby-redtail`, therefore, the following environment variables need to be set:
