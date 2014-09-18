@@ -1,8 +1,9 @@
 module VestorlyApi
-  class Advisor
+  class AdvisorBase
 
     include HTTParty
     extend DefaultEndpoint
+    extend ResponseUtils
 
     def initialize(authenticated_sign_in)
       @authenticated_sign_in = authenticated_sign_in
@@ -10,11 +11,11 @@ module VestorlyApi
     end
 
     def self.advisor_api_endpoint
-      "#{Advisor.default_api_endpoint}/advisors"
+      "#{AdvisorBase.default_api_endpoint}/advisors"
     end
 
     def action_api_endpoint(request_action)
-      "#{Advisor.advisor_api_endpoint}/#{@authenticated_sign_in.advisor_id}/#{request_action}"
+      "#{AdvisorBase.advisor_api_endpoint}/#{@authenticated_sign_in.advisor_id}/#{request_action}"
     end
 
     def advisor_user_entries(query_params={})
@@ -25,14 +26,23 @@ module VestorlyApi
       get_request('posts.json', query_params)
     end
 
-    private
+    protected
 
+    # TODO: refactor this to a query object
     def post_request(request_action, query_params={})
-      Advisor.post( action_api_endpoint(request_action), :query => request_query_params(query_params))
+      AdvisorBase.post( action_api_endpoint(request_action), :query => request_query_params(query_params))
     end
 
     def get_request(request_action, query_params={})
-      Advisor.get( action_api_endpoint(request_action), :query => request_query_params(query_params))
+      AdvisorBase.get( action_api_endpoint(request_action), :query => request_query_params(query_params))
+    end
+
+    def put_request(request_action, query_params={})
+      AdvisorBase.put( action_api_endpoint(request_action), :query => request_query_params(query_params))
+    end
+
+    def delete_request(request_action, query_params={})
+      AdvisorBase.put( action_api_endpoint(request_action), :query => request_query_params(query_params))
     end
 
     def request_query_params(query_params={})

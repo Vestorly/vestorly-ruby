@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.vestorly.com/api/v1/advisors/wisz/advisor_user_entries.json?filter_by=prospects&vestorly-auth=invalid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2014 04:17:10 GMT
+      Server:
+      - thin 1.6.2 codename Doc Brown
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - cc46cdaf-5c58-4ad7-8f8a-b28bff65560f
+      X-Runtime:
+      - '0.030860'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Mon, 07 Apr 2014 04:17:10 GMT
+- request:
+    method: get
+    uri: https://www.vestorly.com/api/v1/advisors/wisz/advisor_user_entries.json?vestorly-auth=invalid
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 403
+      message: Forbidden
+    headers:
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept, Authorization
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Expose-Headers:
+      - api_version
+      Api-Version:
+      - 1.0.0
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Mon, 07 Apr 2014 04:28:24 GMT
+      Server:
+      - thin 1.6.2 codename Doc Brown
+      Vary:
+      - Accept-Encoding
+      X-Rack-Cache:
+      - miss
+      X-Request-Id:
+      - f64a6e5d-1ee6-4431-ae7e-20b64f1d079f
+      X-Runtime:
+      - '0.049640'
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: " "
+    http_version: 
+  recorded_at: Mon, 07 Apr 2014 04:28:24 GMT
+recorded_with: VCR 2.9.0

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe VestorlyApi::Advisor do
+describe VestorlyApi::AdvisorBase do
 
   def api_request_helper(requester, request_params)
     requester.get(
@@ -20,6 +20,7 @@ describe VestorlyApi::Advisor do
     it 'gives the base uri api for advisors' do
       subject.advisor_api_endpoint.should eq('https://www.vestorly.com/api/v1/advisors')
     end
+
   end
 
   describe 'with valid parameters' do

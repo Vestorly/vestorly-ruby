@@ -98,7 +98,7 @@ describe VestorlyApi::SignIn do
 
         it 'raise unauthorized sign_in error' do
           sign_in_api = described_class.new(username, password)
-          expect { sign_in_api.sign_in }.to raise_error( VestorlyApi::Exceptions::InvalidSignInCredentials )
+          expect { sign_in_api.sign_in }.to raise_error( VestorlyApi::Exceptions::Error )
         end
 
       end
