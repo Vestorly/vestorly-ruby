@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.vestorly.com/api/v1/session_management/sign_in?password=12desbrosses&username=jpwisz@gmail.com&version=1
+    uri: https://vestorly-dev.herokuapp.com/api/v1/session_management/sign_in?password=12desbrosses&username=david@vestorly.com&version=1
     body:
       encoding: UTF-8
       string: ''
@@ -12,66 +12,98 @@ http_interactions:
       code: 201
       message: Created
     headers:
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - POST, GET, OPTIONS, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - "*"
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Thu, 18 Sep 2014 23:44:06 GMT
+      Status:
+      - 201 Created
       Access-Control-Expose-Headers:
       - api_version
       Api-Version:
       - 1.0.0
-      Cache-Control:
-      - max-age=0, private, must-revalidate
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - x-vestorly-auth, Origin, X-Requested-With, Content-Type, Accept, Authorization
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 02 Apr 2014 18:04:21 GMT
-      Etag:
-      - '"7039c4d8cb5d7ef9ceeb41db0bdc977b"'
-      Server:
-      - thin 1.6.2 codename Doc Brown
-      Set-Cookie:
-      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA0Y2JhMTI3MWZhZTA0MTYyNTRmMTRhNjZhOTRkODQwBjsAVA%3D%3D--e6b2692a819ad0e7a106eeaba4ffacab8036622e;
-        path=/; HttpOnly
-      - vestorly-auth=eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ;
-        path=/
-      Vary:
-      - Accept-Encoding
-      X-Rack-Cache:
-      - invalidate, pass
-      X-Request-Id:
-      - 7f5ac2cb-645c-462d-9994-1b22d4a14c36
-      X-Runtime:
-      - '0.163948'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      Etag:
+      - '"f22635638b2fe1ada79e94f9629214bb"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTY5NDA1OGZhMTc3NGM0MGZhZTdiNzc4NGUxODkwMjc0BjsAVA%3D%3D--6c8f7970bdf34342e2595f20fef886cca28fed3c;
+        path=/; HttpOnly
+      - vestorly-auth=eyJwYXlsb2FkIjoiNTM0ZDllYmZiMDM0ZDUwMDAyMDAwNGZkIiwiY3JlYXRlZF9vbiI6MTQxMTA4Mzg0Niwic2lnbmF0dXJlIjoiVUZtcmU5REZUb0V1KzNBY2dTajdGRTJlZVJ2REl0S0Nmbm1Mbzh5cWpIVT0ifQ;
+        path=/
+      X-Request-Id:
+      - 0d023497-3318-4669-a57d-ef92be967edf
+      X-Runtime:
+      - '0.146691'
+      X-Rack-Cache:
+      - invalidate, pass
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"user":{"_id":"4f6542c0cfb4930001000013","about":"","account_type":"free","activation_code":null,"activation_redirect_url":null,"active":true,"activity_feed_events":[],"address":"12
-        Desbrosses St.\r\nNew York, NY, 10013","adv_brochure":"","advisor_employees":"5","advisor_users":[],"ary_update":"2013-04-12T00:00:00Z","assets":"5000000","assets_ary":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],"assets_ary_update":"2014-03-31","auto_curation_enabled":false,"birthday":"12/08/1984","city":"","client_ids":["4fcd004ed374200001000098","50f7019a4557fd00020000d2","515b3c9498fdb50002000010","515f71e812e6560002000032","516331ea95e6240002000061","5163bd1d9bba1b00020004e7","51686a6240ffcc0002000017","5170656d3366f80002000a15","5176a2128278bf000200011c","517714dd76a6640002000046","51b919c2dba71e000200002c","51c477dddd624600020004b9","51bb445d4c429a000200000b","51e7db987f9f4100020001d6","51f668915c12540002000238","506b3f9d48e8f10002000348","523cd173fc103a0002000030","523cd1b7a2b8870002000042","525811447b944500020000f0","51793515960b0b0002000518","5193d7c3d3c0e60002000216","51a754a038161400020002b8","51b648b91d84b80002000009","51b64a29f0c08500020001e0","51d1dbace5b4b20002000794","51c4b56226d63300020000ab","51f19433b152c70002000026","525813b0b6c5370002000383","5261603c7838bd0002000219","52617c057853c10002000019","52878b345d82c5000200000c","52cdc252c41e2d000200021d","52e16afce3b97e00020000f3","52f3bf950150fc00020001d3","52fa1ff996150b000200018c","530cd05bb984e8000200004b","5318fac983e2f100020003ef","531de33a1476890002000164","531fa4c88180f900020002bd","532382b63a058e0002000011","53238a0a3778d40002000020"],"company":"Justin
-        Wealth Management","compensation_method":["% of AUM"],"compliance_officer_ids":[],"compliance_setting":{"_id":"5170d2d0e0d28b0002000028","email":"","last_emailed":"1993-04-24T15:31:45+00:00","last_updated":"2014-03-28T20:59:25+00:00","name":"","phone":"","require_pre_approval":false,"status":"later"},"consultation_reminder":"on","content_setup_completed":true,"content_setup_started":true,"created_on":"2012-06-18T16:06:05Z","custodian":"Interactive","disclosure":"","education":[{"school":{"id":"22475845791","name":"Hampden-Sydney
-        College"},"type":"College"}],"email_blast":"off","email_blast_date":"1993-05-29T11:14:14+00:00","email_newsletter_date":null,"email_newsletter_frequency":"off","email_newsletter_hour":0,"email_report_blast":"off","email_report_blast_date":"1994-02-05T01:05:25+00:00","embed_height":"1000","embed_limit":"4","embed_width":"500","facebook_blast":"off","facebook_blast_date":"1993-05-29T11:14:14+00:00","facebook_newsletter_date":null,"facebook_newsletter_frequency":"off","facebook_newsletter_hour":0,"facebook_uid":"54400606","family":[{"name":"Jeff
-        Spagnolo","id":"1650549490","relationship":"uncle"},{"name":"Zach Wisz","id":"100003541167750","relationship":"brother"}],"first_name":"Justin","free_plan":false,"gender":"male","google_uid":null,"graph_start_date":"2013-04-14","have_advisor":false,"interest_consultation":"No","interest_in_new_advisor":false,"invite_queue":[{"email
-        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
-        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
-        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
-        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
-        person":true},{"email person":true},{"email person":true},{"email person":true},{"email
-        person":true},{"email person":true},{"email person":true},{"csv people":true}],"invited":true,"invites":9,"is_seed_with_vestorly_news":false,"joined_on":"2012-03-18T02:04:48+00:00","last_check_prospect":"2003-04-05T22:28:41+00:00","last_name":"Wisz","last_newscred_update":"2014-04-01T17:03:31+00:00","last_update_all_arrays":"2014-03-31T01:55:55+00:00","last_weekly_email":"2013-06-13T12:03:35+00:00","launch_date":"2012-04-04T22:56:05+00:00","linkedin":"http://www.linkedin.com/pub/justin-wisz/9/375/193","linkedin_blast":"off","linkedin_blast_date":"1993-05-29T11:14:14+00:00","linkedin_newsletter_date":null,"linkedin_newsletter_frequency":"off","linkedin_newsletter_hour":0,"linkedin_reminder_blast_date":"1993-07-29T13:04:56+00:00","linkedin_uid":null,"location":{"id":"108424279189115","name":"New
-        York, New York"},"logo":"","meeting_date":"2013-05-29 11:14:14 +0000","members_added":true,"members_added_started":true,"message_clicks":128,"message_sign_ups":2,"messages":0,"migrate_addl_social_model2":false,"migrate_addl_social_model3":false,"migrate_addl_social_model4":true,"migrated_advisor_users":true,"migrated_last_active_time":false,"migrated_model":true,"migrated_social_model":true,"migrated_social_model_advisor":false,"name":"Justin
-        Wisz","newscred_setting_id":"52f1a010cfffbe0002000033","newsletter_setup_completed":true,"newsletter_setup_started":true,"num_advisor_clients":12,"num_advisor_prospects":25,"num_clients":5,"num_posts":34,"other_compensation":"","other_custodian":"","other_services_types":"","password_hash":"$2a$10$1JiqO8wOoeOxQj3Z9guOgub8cevUUTeXRgtYv3GaOgzqj2RK70q5i","past_due":false,"performance_audited":"No","phone":"6467234320","picture":"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-snc6/260675_54400606_577132500_q.jpg","plan":"none","portfolio_size":null,"posts_randomized":false,"profile_picture":"4f6542c0cfb4930001000013/1336061606/Logo-Vector.gif","prospects_ary":[1,1,2,3,3,5,5,5,6,8,8,15,15,15,15,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,16,17,17,17,17,17,17,17,17,19,19,19,19,21,21,21,22,23,23,23,23,23,23,27,28,28,29,29,29,29,29,31,31,31,31,31,31,31,32,32,32,32,32,32,33,33,33,33,33,33,33,33,33,33,33,33,33,33,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,38,38,38,38,38,38,38,38,38,38,38,38,38,38,38,39,39,39,39,39,39,39,39,39,39,39,39,39,39,40,40,40,40,40,41,41,41,41,41,41,41,41,41,41,41,41,41,41,42,42,42,42,42,42,42,42,42,43,43,43,43,44,44,45,45,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47,47],"prospects_ary_update":"2014-03-31","referral_reminder":"on","reg_number":"155555","require_pre_approval":false,"salesforce_account_id":null,"salesforce_contact_id":null,"salesforce_lead_id":null,"services_types":["Portfolio
-        management for individuals","Portfolio management for companies or institutions"],"slug":"wisz","state":"NY","stripe_customer_id":"cus_T57hyIsxuwVFT5","top_bar_content_published":true,"top_bar_content_setup_completed":true,"top_bar_enabled":false,"top_bar_members_added":true,"top_bar_newsletter_setup_completed":true,"trial_length":126230400,"twitter_blast":"off","twitter_blast_date":"1993-05-29T11:14:14+00:00","twitter_handle":"vestorly","twitter_newsletter_date":null,"twitter_newsletter_frequency":"off","twitter_newsletter_hour":0,"twitter_uid":"28592814","twitter_user":{"_id":"5213defaa53e3e0002000390","email":null,"last_friend_ordered_hash":"1993-10-18T04:54:16+00:00","name":null,"secret":"ZvjDNQ8gtSa5xVNG9uHLBpb2IzEIJtJU8jiCZvdhu0o","token":"28592814-QGYClRXsQsgEofMtvnTVWcX79dqnPTIBYnwy50WrU","total_friends":0,"uid":"28592814"},"username":"jpwisz@gmail.com","views_ary":[0,4,4,4,4,5,5,5,16,17,17,17,17,17,17,17,17,17,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,19,20,20,20,20,20,20,20,20,20,20,20,24,24,24,25,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,27,30,30,30,30,30,30,30,30,30,30,32,32,32,32,32,32,32,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,34,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,35,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,36,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37,37],"views_ary_update":"2014-03-31","wall_post_clicks":0,"wall_post_sign_ups":0,"wall_posts":0,"webpage_image_id":"5281036a159578000200007a","website":"www.bloomberg.com","weekly_email_blast":"off","work":[{"employer":{"id":"306505096071446","name":"Vestorly"},"position":{"id":"109861219064569","name":"Co-Founder/CEO"},"start_date":"0000-00"},{"employer":{"id":"119208724777451","name":"ForwardPro
-        Partners"},"location":{"id":"114952118516947","name":"San Francisco, California"},"position":{"id":"107957955904825","name":"Founder"},"start_date":"2009-01","end_date":"2010-01"},{"employer":{"id":"103772269661447","name":"SNL
-        Financial"},"location":{"id":"108424279189115","name":"New York, New York"},"start_date":"2009-01","end_date":"2009-01"},{"employer":{"id":"108151482549047","name":"Fisher
-        Investments"},"location":{"id":"103754196329579","name":"Woodside, California"},"start_date":"2007-01","end_date":"2009-01"}],"yahoo_uid":null,"zip":"10013","picture_url":null,"user_type":"Advisor","app_theme_logo_url":null,"social_tabs_enabled":false,"news_url":null},"auth_cookie":"eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ","new_user":false,"vestorly-auth":"eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ","advisor_id":"wisz","advisor_company":"Justin
-        Wealth Management","advisor_picture_url":null,"advisor_website":"http://www.bloomberg.com","message":"Login
-        Successful."}'
+      string: '{"user":{"_id":"534d9ebfb034d500020004fd","_slugs":["rodas"],"about":"","account_type":"premium","activation_code":"ce4ouezeyy","activation_redirect_url":null,"active":true,"address":null,"adv_brochure":null,"advisor_employees":null,"assets":null,"assets_ary_update":"2014-09-16","auto_curation_enabled":false,"city":null,"company":"Rodas
+        Investments","compensation_method":null,"compliance_bcc_email_address":null,"consultation_reminder":"on","content_setup_completed":false,"content_setup_started":false,"created_at":null,"custodian":null,"disclosure":"534d9ebfb034d500020004fd/1403369701/DISCLOSE_TEST_DOC_with_long_name.pdf","email_blast":"off","email_blast_date":"2004-09-08T16:08:16+00:00","email_newsletter_date":null,"email_newsletter_hour":-1,"email_report_blast":"weekly","email_report_blast_date":"2014-09-15T11:03:25+00:00","embed_height":"800","embed_limit":"2","embed_width":"400","ember_login_only":true,"facebook_blast":"off","facebook_blast_date":"1994-04-15T21:03:59+00:00","facebook_newsletter_date":null,"facebook_newsletter_hour":-1,"facebook_uid":null,"first_name":"David","free_plan":false,"google_uid":null,"graph_start_date":"2014-04-18","has_friends":false,"have_advisor":false,"interest_consultation":"Not
+        Yet","interest_in_new_advisor":false,"invited":true,"invites":9,"is_authenticated":false,"is_seed_with_vestorly_news":false,"joined_on":"2014-04-15T21:03:59+00:00","last_check_prospect":"2004-04-15T20:39:49+00:00","last_name":"Rodas","last_newscred_update":"2014-07-22T17:37:46+00:00","last_update_all_arrays":"2014-09-16T20:33:40+00:00","last_weekly_email":"1994-04-15T21:03:59+00:00","launch_date":"2014-04-15T21:03:59+00:00","linkedin":null,"linkedin_blast":"off","linkedin_blast_date":"1994-04-15T21:03:59+00:00","linkedin_newsletter_date":null,"linkedin_newsletter_hour":-1,"linkedin_reminder_blast_date":"1994-04-15T21:03:59+00:00","linkedin_uid":null,"logo":null,"meeting_date":"Tue,
+        15 Apr 2014 21:03:59 GMT","members_added":false,"members_added_started":false,"message_clicks":0,"message_sign_ups":0,"messages":0,"migrate_addl_social_model2":true,"migrate_addl_social_model3":false,"migrate_addl_social_model4":true,"migrated_advisor_users":true,"migrated_last_active_time":true,"migrated_model":true,"migrated_social_model":true,"migrated_social_model_advisor":true,"name":"David
+        Rodas","news_url":"https://test.vestorly.com","newscred_setting_id":"534f53b66aee1c0002000071","newsletter_setup_completed":false,"newsletter_setup_started":false,"num_advisor_clients":0,"num_advisor_prospects":35,"num_clients":null,"num_posts":32,"number_articles_per_group":2,"number_articles_per_newsletter":1,"other_compensation":null,"other_custodian":null,"other_services_types":null,"password_hash":"$2a$10$O01kjKb8wfGrsQHy.e0czuIhe2R3.Gmuu0HsIT39PeE1vkAntUqOG","past_due":false,"performance_audited":null,"phone":"3423331231","plan":"advisor-annual-subscription","portfolio_size":null,"posts_randomized":false,"profile_picture":null,"prospects_ary_update":"2014-09-16","redtail_api_user":{"_id":"539b099d243c3bc68b000005","access_token_expires_at":null,"api_key":null,"api_uri":null,"email":null,"last_friend_ordered_hash":"1994-06-13T14:24:29+00:00","name":null,"password":null,"refresh_token":null,"secret":null,"token":null,"total_friends":0,"uid":null,"user_key":null,"username":null},"referral_reminder":"on","reg_number":null,"require_pre_approval":false,"salesforce_account_id":null,"salesforce_api_user":{"_id":"539b099deacb48c4fc000009","access_token_expires_at":null,"add_to_group":true,"allow_update_all":false,"auto_export":false,"auto_import":false,"email":null,"export_context":"contact","export_only_new_items":true,"export_unknown":false,"group_object_name":"","import_context":"contact","instance_url":null,"last_friend_ordered_hash":"1994-06-13T14:24:29+00:00","last_import_date":null,"name":null,"password":"12desbrosses","refresh_token":null,"require_email":true,"secret":"1087942667670077342","token":"IBU3aTj28Lv5qXN9zilNXOInW","total_friends":0,"uid":"3MVG9xOCXq4ID1uEO0trcUt3Lg9LOtItqLkV.M7ZWj7kMbUg8.ET1KQffvzhaBr.RgiuaG4OZe1yfhfnXiZU","username":"david@vestorly.com","with_custom_fields":false},"salesforce_contact_id":null,"salesforce_lead_id":null,"services_types":null,"slug":"rodas","social_tabs_enabled":false,"state":null,"stripe_customer_id":null,"theme_id":"534f622be9cf36000200017f","top_bar_content_published":false,"top_bar_content_setup_completed":true,"top_bar_enabled":true,"top_bar_members_added":true,"top_bar_newsletter_setup_completed":false,"topics":["Investing","Sports","Business
+        News"],"trial_length":7776000,"twitter_blast":"off","twitter_blast_date":"1994-04-15T21:03:59+00:00","twitter_handle":null,"twitter_newsletter_date":null,"twitter_newsletter_hour":-1,"twitter_uid":null,"unsubscribed":false,"updated_at":"2014-09-16T20:33:40Z","user_type":"Advisor","username":"david@vestorly.com","views_ary_update":"2014-09-16","wall_post_clicks":0,"wall_post_sign_ups":0,"wall_posts":0,"webpage_image_id":"534da002a1abda0002000003","website":"http://asdasd.asdasd.com","weekly_email_blast":"on","yahoo_uid":null,"zip":null,"picture_url":null,"app_theme_logo_url":null},"new_user":false,"vestorly-auth":"eyJwYXlsb2FkIjoiNTM0ZDllYmZiMDM0ZDUwMDAyMDAwNGZkIiwiY3JlYXRlZF9vbiI6MTQxMTA4Mzg0Niwic2lnbmF0dXJlIjoiVUZtcmU5REZUb0V1KzNBY2dTajdGRTJlZVJ2REl0S0Nmbm1Mbzh5cWpIVT0ifQ","advisor_id":"rodas","advisor_company":"Rodas
+        Investments","advisor_picture_url":null,"advisor_website":"http://asdasd.asdasd.com","message":"Login
+        Successful.","theme":{"_id":"534f622be9cf36000200017f","activity_feed_enabled":true,"advisor_weekly_activity_btn_text":"View
+        your dashboard","advisor_weekly_activity_intro_text":"Here is your updated
+        report.  You can view the activity in your community on your dashboard and
+        on the attached file.","allowTagging":false,"api_url":"https://test.vestorly.com","api_url_ssl":"https://test.vestorly.com","assets_vestorly_url":"//s3.amazonaws.com/assets-vestorly/","auto_publish_by_topics":true,"auto_publish_feature_enabled":true,"auto_publish_social_enabled":true,"auto_published_articles_number":2,"bodywrap":"#7a899f","bodywrap_text_color":"#FFFFFF","btn_bg_color":"#7a899f","btn_header_brand_bg":"$united-gray-light","btn_header_brand_border":"$united-gray-light","btn_header_item_bg":"$united-green","btn_header_item_border":"$united-green","btn_login_bg":"$united-blue","btn_newsletter_bg":"$united-blue","btn_suggest_bg":"lighten($united-blue,
+        10%)","btn_suggest_border":"lighten($united-blue, 10%)","btn_text_color":"#FFFFFF","clean_featured_tile":false,"company_address":"12
+        Desbrosses Street, New York, New York 10013","company_contact_email":"hello@vestorly.com","company_homepage_url":"http://www.vestorly.com","company_name":"United
+        Capital","compliance_docs":"","compliance_docs_folder_url":"//s3.amazonaws.com/s3-dev.vestorly.com/","compliance_integration_enabled":true,"content_library_newsletter_enabled":false,"crm_integration_enabled":true,"csv_upload_enabled":false,"custom_navbar_enabled":true,"custom_sources_enabled":true,"default":false,"default_facebook_image":"","default_facebook_share_image_url":"http://s3.amazonaws.com/assets-united-cap/uc-default-share.png","default_loading_background":"//s3.amazonaws.com/s3.vestorly.com/webpage_images/5335e176b7fe8d0002000f14/image.?1396040061","default_slugname":"uc","default_social_providers_enabled":true,"drag_drop_enabled":false,"email_bannercolor":"#4b798e","email_bgcolor":"#4b798e","email_h3color":"#4b798e","email_header_image_url":"http://s3.amazonaws.com/assets-vestorly/emails/standard/email-header.png","email_header_path":"http://s3.amazonaws.com/assets-vestorly/emails/uc/united-source-email-header.png","email_headwrap":"#4b798e","email_more_button_image_url":"http://s3.amazonaws.com/assets-vestorly/emails/standard/more_btn.png","email_theme":"standard","email_theme_name":"standard","enable_premium_view":false,"enable_tagging":false,"extra_member_data_fields_enabled":false,"facebook_app_id":"undefined","facebook_preview":"","facebook_preview_image_url":"http://standard.vestorly.com/assets/vestorly/facebook-preview.png","favicon_image_url":"http://standard.vestorly.com/favicon.ico","featured_post_tile_footer_text":"","from_email":"thesource@unitedcp.com","full_data_pull_enabled":false,"gac_id":"UA-29479638-1","invite_approved_advisor_banner_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor+invite+mailer/banner.jpg","invite_approved_advisor_body_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor+invite+mailer/image.jpg","invite_approved_advisor_btn_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor+invite+mailer/button.jpg","invite_approved_advisor_foooter":"Vestorly
+        is still by invitation only. You''ve been selected because we value your feedback.  Feel
+        free to e-mail us at","invite_approved_advisor_foooter_text":"Vestorly is
+        still by invitation only. You''ve been selected because we value your feedback.  Feel
+        free to e-mail us at","invite_approved_advisor_footer_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor+invite+mailer/footer_bg.jpg","invite_approved_advisor_header":"You
+        are invited to join the next group of advisors using Vestorly to grow their
+        firms with smarter communication.","invite_approved_advisor_header_text":"You
+        are invited to join the next group of advisors using Vestorly to grow their
+        firms with smarter communication.","invite_approved_advisor_logo_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor+invite+mailer/logo.png","isMoneyMind":false,"is_default":true,"is_disable_https_login":false,"is_money_mind_enabled":false,"is_premium":false,"kit_id":"xxe6nui","linkedin_app_id":"x281lefk97mj","linkedin_preview":"","linkedin_preview_image_url":"http://standard.vestorly.com/assets/vestorly/linkedin-preview.png","login_btn_bg_color":"#7a899f","login_btn_border_color":"#7a899f","mailer_bottom_address":"500
+        Newport Center Drive, Newport Beach, CA","mailer_bottom_copyright":"United
+        Capital, 2014. All rights reserved.","mailer_footer_email":"hello@vestorly.com","mailer_from_email":"hello@vestorly.com","main_email":"thesource@unitedcp.com","main_logo":"http://s3.amazonaws.com/assets-vestorly/emails/uc/main-logo-dark.png","main_logo_dark":"","manual_publish_enabled":true,"member_activity_enabled":true,"member_data_enabled":true,"member_deleting_enabled":true,"member_export_enabled":false,"more_button_path":"http://s3.amazonaws.com/assets-vestorly/emails/uc/more_btn.jpg","multi_content_libraries_enabled":true,"name":"united_capital","navbar_background_color":"#1b1d26","navbar_default_bg":"$gray-dark","navbar_default_border":"$gray-dark","navbar_default_link_active_bg":"lighten($navbar-default-bg,
+        5%)","navbar_discover_btn_bg_color":"#7a899f","navbar_discover_btn_border_color":"#7a899f","navbar_discover_btn_text":"Discover
+        More","navbar_extra_btn_bg_color":"#7a899f","navbar_extra_btn_border_color":"#7a899f","navbar_extra_btn_enabled":false,"navbar_extra_btn_text":"","navbar_extra_btn_url":"#","navbar_image_url":"http://s3.amazonaws.com/assets-vestorly/emails/standard/main-logo-dark.png","navbar_share_btn_bg_color":"#7a899f","navbar_share_btn_border_color":"#7a899f","navbar_share_btn_text":"Suggest
+        This","new_advisor_weekly_content":"Here is your updated report.  You can
+        view the activity in your community on your dashboard and on the attached
+        file.","new_advisor_weekly_prompt":"View your dashboard","new_user_notification":true,"new_user_notification_btn_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor_new_prospect_mailer/go-to-dashboard.png","new_user_notification_email_override":null,"new_weekly_mailer_content":"Here
+        is a collection of %s''s latest activity, prepared for you.","new_weekly_mailer_default":"Hello","new_weekly_mailer_prompt":"See
+        what it''s about","new_weekly_mailer_saluation":"%s,","new_weekly_mailer_subject":"Our
+        latest update prepared for you","newsletter_btn_bg_color":"#7a899f","newsletter_btn_border_color":"#7a899f","newsletter_btn_text":"See
+        what it''s about","newsletter_default_salutation_text":"Hello,","newsletter_enabled":true,"newsletter_export_enabled":true,"newsletter_footer_image_url":"http://s3.amazonaws.com/assets-vestorly/emails/standard/main-logo-dark.png","newsletter_header_bg":"$united-gray","newsletter_intro_text":"Here
+        is a collection of %s''s latest activity, prepared for you.","newsletter_post_title_bg":"$united-blue","newsletter_post_title_bg_color":"#7a899f","newsletter_post_title_font":"Georgia,
+        Arial, serif","newsletter_saluation_text":"%s,","newsletter_schedule_enabled":true,"newsletter_stats_enabled":true,"newsletter_subject":"Our
+        latest update prepared for you","newsletter_tile_font":"Arial","on_error_blank_logo_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-138x30.png","on_error_header_logo_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-80x80.png","on_error_newsletter_footer_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-newsletter-footer.png","on_error_newsletter_header_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-email-header.png","on_error_profile_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-80x80.png","on_error_recommend_post_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-80x80.png","on_error_social_preview_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-80x80.png","on_error_website_image":"http://s3.amazonaws.com/assets-vestorly/default_images/blank-80x80.png","open_reader_btn_enabled":false,"original_post_source_logo_url":null,"phone_number":"949-999-8500","play_tag_bg":"$united-green","play_tag_text":"$white","post_tagging_enabled":true,"privacy_policy":"https://www.vestorly.com/privacy","privacy_policy_url":"https://www.vestorly.com/privacy","publisher_home_url":"http://standard.vestorly.com","publisher_login_button":"Secure
+        Access","publisher_login_button_text":"Secure Access","publisher_login_explanation":"Enter
+        your credentials to get access","publisher_login_explanation_text":"Enter
+        your credentials to get access","publisher_login_header_text":"Welcome Back","publisher_login_ribbon":"Welcome
+        Back","reader_login_button":"See Your Collection","reader_login_button_text":"See
+        Your Collection","reader_login_explanation":"Enter your email for a personalized
+        experience","reader_login_explanation_text":"Enter your email for a personalized
+        experience","reader_login_header_text":"Your Personalized Library","reader_login_ribbon":"Your
+        Personalized Library","recommended_posts_enabled":false,"reporting_email_override":null,"sales_demo_url":"http://www.meetme.so/Vestorly","send_xls_weekly_report_enabled":false,"server_url":"//vestorly-dev.herokuapp.com","site_name":"http://test.vestorly.com","site_twitter":"","site_url":"http://test.vestorly.com","social_buttons_enabled":true,"social_description":"Community
+        Update","social_login_advisor_enabled":false,"social_login_reader_enabled":false,"social_posting_text":"%s
+        has an update, see what it''s about","social_publish_enabled":true,"social_title":"%s
+        Collection of Content","terms_and_conditions":"https://www.vestorly.com/terms","terms_and_conditions_url":"https://www.vestorly.com/terms","test_email_override":null,"topic_filtering_enabled":true,"twitter_preview":"","twitter_preview_image_url":"http://standard.vestorly.com/assets/vestorly/twitter-preview.png","uc_money_mind_enabled":true,"unclickable_featured_tile_enabled":true,"use_default_logo":"true","weekly_advisor_header_mobile_img_url":"https://s3.amazonaws.com/assets-vestorly/emails/advisor_weekly_advisor_report/header_mobile.jpg","work_tag_bg":"$united-blue","work_tag_text":"$white"}}'
     http_version: 
-  recorded_at: Wed, 02 Apr 2014 18:04:20 GMT
+  recorded_at: Thu, 18 Sep 2014 23:44:06 GMT
 recorded_with: VCR 2.9.0

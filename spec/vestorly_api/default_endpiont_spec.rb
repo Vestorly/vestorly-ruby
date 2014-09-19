@@ -6,11 +6,11 @@ describe VestorlyApi::DefaultEndpoint do
 
   describe 'default values for API' do
     it 'gives the base url to Vestorly endpoint' do
-      subject.base_api_uri.should eq('https://www.vestorly.com')
+      subject.base_api_uri.should eq('https://vestorly-dev.herokuapp.com/')
     end
 
     it 'gives the base Vestory API endpoint' do
-      subject.default_api_endpoint.should eq('https://www.vestorly.com/api/v1')
+      subject.default_api_endpoint.should eq('https://vestorly-dev.herokuapp.com/api/v1')
     end
 
     it 'gives the Vestorly API version' do

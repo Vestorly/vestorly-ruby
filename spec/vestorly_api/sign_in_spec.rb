@@ -18,7 +18,7 @@ describe VestorlyApi::SignIn do
     end
 
     it 'should have the base url set to the VestorlyApi API endpoint' do
-      subject.sign_in_api_endpoint.should eq('https://www.vestorly.com/api/v1/session_management/sign_in?version=1')
+      subject.sign_in_api_endpoint.should eq('https://vestorly-dev.herokuapp.com/api/v1/session_management/sign_in?version=1')
     end
   end
 
@@ -27,7 +27,7 @@ describe VestorlyApi::SignIn do
 
       describe "with valid authentication" do
 
-        let(:username) { 'jpwisz@gmail.com' }
+        let(:username) { 'david@vestorly.com' }
         let(:password) { '12desbrosses' }
 
         let(:request_params) { {
@@ -51,7 +51,7 @@ describe VestorlyApi::SignIn do
 
         it 'makes sign_in request to api returns authentication token' do
           sign_in_api = described_class.new(username, password)
-          sign_in_api.sign_in.should eq("eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ")
+          sign_in_api.sign_in.should eq("eyJwYXlsb2FkIjoiNTM0ZDllYmZiMDM0ZDUwMDAyMDAwNGZkIiwiY3JlYXRlZF9vbiI6MTQxMTA4Mzg0Niwic2lnbmF0dXJlIjoiVUZtcmU5REZUb0V1KzNBY2dTajdGRTJlZVJ2REl0S0Nmbm1Mbzh5cWpIVT0ifQ")
         end
 
         it 'assigns api response for further use' do
@@ -63,13 +63,13 @@ describe VestorlyApi::SignIn do
         it 'gives authentication token after sign_in' do
           sign_in_api = described_class.new(username, password)
           sign_in_api.sign_in
-          sign_in_api.authentication_token.should eq("eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ")
+          sign_in_api.authentication_token.should eq("eyJwYXlsb2FkIjoiNTM0ZDllYmZiMDM0ZDUwMDAyMDAwNGZkIiwiY3JlYXRlZF9vbiI6MTQxMTA4Mzg0Niwic2lnbmF0dXJlIjoiVUZtcmU5REZUb0V1KzNBY2dTajdGRTJlZVJ2REl0S0Nmbm1Mbzh5cWpIVT0ifQ")
         end
 
         it 'gives the advisor id' do
           sign_in_api = described_class.new(username, password)
           sign_in_api.sign_in
-          sign_in_api.advisor_id.should eq("wisz")
+          sign_in_api.advisor_id.should eq("rodas")
         end
       end
 

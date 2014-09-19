@@ -22,14 +22,16 @@ Or install it yourself as:
 rspec
 ```
 
-## Usage
+## Basic Setup
 
-This gem uses `ruby-redtail`, therefore, the following environment variables need to be set:
+To setup the client, you'll need the following configuration.
+
+Rails example
 
 ```ruby
-ENV['REDTAIL_API_KEY']
-ENV['REDTAIL_SECRET_KEY']
-ENV['REDTAIL_API_URI']
+VestorlyApi.configure do |config|
+  config.api_uri = ENV['VESTORLY_API_URI']
+end
 ```
 
 ### SignIn to Vestorly API

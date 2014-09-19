@@ -10,16 +10,16 @@ describe VestorlyApi::Member do
     )
   end
 
-  let(:username) { 'jpwisz@gmail.com' }
+  let(:username) { 'david@vestorly.com' }
   let(:password) { '12desbrosses' }
-  let(:advisor_id) { 'wisz' }
+  let(:advisor_id) { 'rodas' }
 
   let(:request_params) { {
     username: username,
     password: password
   }}
 
-  let(:authentication_token) { "eyJwYXlsb2FkIjoiNGY2NTQyYzBjZmI0OTMwMDAxMDAwMDEzIiwiY3JlYXRlZF9vbiI6MTM5NjQ2MTg2MCwic2lnbmF0dXJlIjoiUzdYV1h6d2VaNk5vZWZialoxeGFrQmNlQjM0VktEb0s1bytRTGZOckZyST0ifQ" }
+  let(:authentication_token) { "eyJwYXlsb2FkIjoiNTM0ZDllYmZiMDM0ZDUwMDAyMDAwNGZkIiwiY3JlYXRlZF9vbiI6MTQxMTA3OTcxMywic2lnbmF0dXJlIjoiWTdxTmpjemZkelZDV2t4bEt6djVwWlZzand1eGx0NE1DREYwODNjR2FpQT0ifQ" }
 
   before do
     VestorlyApi::SignIn.any_instance.stub(:sign_in).with(username, password).and_return { authentication_token }
@@ -58,13 +58,13 @@ describe VestorlyApi::Member do
       it 'fetch members' do
         members_api = described_class.new(@sign_in_api)
         fetched_members = members_api.fetch({ 'filter_by' => 'prospects' })
-        fetched_members.size.should eq(25)
+        fetched_members.size.should eq(34)
       end
 
       it 'fetch members have requested fields' do
         members_api = described_class.new(@sign_in_api)
         fetched_members = members_api.fetch({ 'filter_by' => 'prospects' })
-        fetched_members[0]['_id'].should eq('5237885057e3520002000567')
+        fetched_members[0]['_id'].should eq('53a4c1acfc4674b330000019')
       end
 
     end

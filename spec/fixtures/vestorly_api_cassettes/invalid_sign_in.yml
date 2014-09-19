@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://www.vestorly.com/api/v1/session_management/sign_in?password=nonexistingdude&username=invalid@example.com&version=1
+    uri: https://vestorly-dev.herokuapp.com/api/v1/session_management/sign_in?password=nonexistingdude&username=invalid@example.com&version=1
     body:
       encoding: UTF-8
       string: ''
@@ -12,44 +12,48 @@ http_interactions:
       code: 401
       message: Unauthorized
     headers:
-      Access-Control-Allow-Headers:
-      - Origin, X-Requested-With, Content-Type, Accept, Authorization
-      Access-Control-Allow-Methods:
-      - POST, GET, OPTIONS, PUT, DELETE
-      Access-Control-Allow-Origin:
-      - "*"
+      Server:
+      - Cowboy
+      Connection:
+      - close
+      Date:
+      - Thu, 18 Sep 2014 23:44:06 GMT
+      Status:
+      - 401 Unauthorized
       Access-Control-Expose-Headers:
       - api_version
       Api-Version:
       - 1.0.0
-      Cache-Control:
-      - no-cache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Max-Age:
+      - '1728000'
+      Access-Control-Allow-Methods:
+      - POST, GET, OPTIONS, PUT, DELETE
+      Access-Control-Allow-Headers:
+      - x-vestorly-auth, Origin, X-Requested-With, Content-Type, Accept, Authorization
       Content-Type:
       - application/json; charset=utf-8
-      Date:
-      - Wed, 02 Apr 2014 18:04:21 GMT
-      Server:
-      - thin 1.6.2 codename Doc Brown
-      Set-Cookie:
-      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFRkkiJTA3Zjc0MThlZDdlMTIzNmJkYWVlOWE4MTk1Y2JjMjQ0BjsAVA%3D%3D--8cf0afda5865de5e29c856faa4f5abc7e9fb8168;
-        path=/; HttpOnly
-      Vary:
-      - Accept-Encoding
-      X-Rack-Cache:
-      - invalidate, pass
-      X-Request-Id:
-      - 146b8852-e39e-478a-ba39-4cc79aa37362
-      X-Runtime:
-      - '0.018364'
       X-Ua-Compatible:
       - IE=Edge,chrome=1
-      Transfer-Encoding:
-      - chunked
-      Connection:
-      - keep-alive
+      Cache-Control:
+      - no-cache
+      Set-Cookie:
+      - _vestorly_session=BAh7BkkiD3Nlc3Npb25faWQGOgZFVEkiJTA3MWZjZWI4OTZmZjk4YWZlNjYzMTAzMjViNDY3ZDJlBjsAVA%3D%3D--a838a6994bd14868e6c7410472fa46fa69b443fa;
+        path=/; HttpOnly
+      X-Request-Id:
+      - 720490cb-0704-402c-9743-45d115682050
+      X-Runtime:
+      - '0.017566'
+      X-Rack-Cache:
+      - invalidate, pass
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 vegur
     body:
       encoding: UTF-8
       string: '{"message":"Invalid login credentials."}'
     http_version: 
-  recorded_at: Wed, 02 Apr 2014 18:04:20 GMT
+  recorded_at: Thu, 18 Sep 2014 23:44:06 GMT
 recorded_with: VCR 2.9.0

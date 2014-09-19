@@ -18,16 +18,16 @@ describe VestorlyApi::AdvisorBase do
     end
 
     it 'gives the base uri api for advisors' do
-      subject.advisor_api_endpoint.should eq('https://www.vestorly.com/api/v1/advisors')
+      subject.advisor_api_endpoint.should eq('https://vestorly-dev.herokuapp.com/api/v1/advisors')
     end
 
   end
 
   describe 'with valid parameters' do
 
-    let(:username) { 'jpwisz@gmail.com' }
+    let(:username) { 'david@vestorly.com' }
     let(:password) { '12desbrosses' }
-    let(:advisor_id) { 'wisz' }
+    let(:advisor_id) { 'rodas' }
 
     let(:request_params) { {
       username: username,
@@ -48,7 +48,7 @@ describe VestorlyApi::AdvisorBase do
     it 'gives the api endpoints based action' do
       advisor_api = described_class.new(@sign_in_api)
       advisor_api.action_api_endpoint('some_action.json')
-        .should eq("https://www.vestorly.com/api/v1/advisors/wisz/some_action.json")
+        .should eq("https://vestorly-dev.herokuapp.com/api/v1/advisors/rodas/some_action.json")
     end
 
     describe 'advisor user entries' do

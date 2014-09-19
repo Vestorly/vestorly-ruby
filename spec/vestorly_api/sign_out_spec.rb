@@ -17,7 +17,7 @@ describe VestorlyApi::SignOut do
     end
 
     it 'should have the base url set to the VestorlyApi API endpoint' do
-      subject.sign_out_api_endpoint.should eq('https://www.vestorly.com/api/v1/session_management/sign_out?version=1')
+      subject.sign_out_api_endpoint.should eq('https://vestorly-dev.herokuapp.com/api/v1/session_management/sign_out?version=1')
     end
 
   end
