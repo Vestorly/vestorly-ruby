@@ -90,6 +90,27 @@ query_params_hash = { 'filter_by' => 'prospects' }
 advisor_posts = advisor_api.advisor_posts(query_params_hash)
 ```
 
+**Example**: Creating a new reader for the advisor
+
+```ruby
+require 'vestorly_api'
+
+sign_in_api = VestorlyApi::SignIn.new('my@user.com', 'password')
+sign_in_api.sign_in
+
+advisor_api = VestorlyApi::AdvisorBase.new(sign_in_api)
+
+new_member_params = {
+  email: "lovecraft@gmail.com",
+  first_name: "Love",
+  group_id: "541c9e06c3b5a0bdda000001",
+  last_name: "Craft"
+}
+
+new_member = advisor_api.create_member( new_member_params )
+
+```
+
 **NB**: The examples above asume the sign_in was successful
 
 

@@ -13,5 +13,8 @@ module VestorlyApi
       end
     end
 
+    def create(member_params={})
+
+    end
   end
 end

@@ -18,12 +18,20 @@ module VestorlyApi
       "#{AdvisorBase.advisor_api_endpoint}/#{@authenticated_sign_in.advisor_id}/#{request_action}"
     end
 
-    def advisor_user_entries(query_params={})
-      get_request('advisor_user_entries.json', query_params)
+    def members(query_params={})
+      members_response = get_request('advisor_user_entries.json', query_params)
+      return members_response['members'] if members_response.key?('members')
+      return members_response
     end
 
     def advisor_posts(query_params={})
       get_request('posts.json', query_params)
+    end
+
+    def create_member(post_params={})
+      post_request('members.json', { member: post_params })
+      return new_member['member'] if new_member.response.code == '201'
+      return new_member
     end
 
     protected

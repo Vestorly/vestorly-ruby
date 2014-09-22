@@ -63,12 +63,12 @@ describe VestorlyApi::AdvisorBase do
 
       it 'records the fixture' do
         advisor_api = described_class.new(@sign_in_api)
-        advisor_api.advisor_user_entries({ 'filter_by' => 'prospects' })
+        advisor_api.members({ 'filter_by' => 'prospects' })
       end
 
       it 'gives the advisor user entries' do
         advisor_api = described_class.new(@sign_in_api)
-        response = advisor_api.advisor_user_entries({ 'filter_by' => 'prospects' })
+        response = advisor_api.members({ 'filter_by' => 'prospects' })
         response.code.should eq(200)
       end
 
